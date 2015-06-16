@@ -26,4 +26,9 @@ class Braintree_ClientToken
     {
         return Braintree_Configuration::gateway()->clientToken()->generateWithoutCustomerIdSignature();
     }
+    public static function factory($attributes)
+    {
+        $instance = new self();
+        return $instance;
+    }
 }
